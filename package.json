@@ -2,7 +2,7 @@
   "name": "electron-next-skeleton",
   "productName": "ElectronNext",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "main/index.js",
   "scripts": {
     "start": "electron .",
     "build": "next build renderer && next export renderer",

@@ -1,39 +1,29 @@
 // Native
-const path = require('path')
-const url = require('url')
+const {join} = require('path')
+const {format} = require('url')
 
 // Packages
 const {BrowserWindow, app} = require('electron')
 const isDev = require('electron-is-dev')
 const prepareNext = require('electron-next')
 
-const createWindow = () => {
-  // Create the browser window.
+// Prepare the renderer once the app is ready
+app.on('ready', async () => {
+  await prepareNext('./renderer')
+
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600
   })
 
-  let entry
+  const url = isDev ? 'http://localhost:8000/start' : format({
+    pathname: join(__dirname, './renderer/start/index.html'),
+    protocol: 'file:',
+    slashes: true
+  })
 
-  if (isDev) {
-    entry = 'http://localhost:8000/start'
-  } else {
-    entry = url.format({
-      pathname: path.join(__dirname, './renderer/start/index.html'),
-      protocol: 'file:',
-      slashes: true
-    })
-  }
-
-  mainWindow.loadURL(entry)
-}
-
-// Prepare the renderer once the app is ready
-app.on('ready', async () => {
-  await prepareNext('./renderer')
-  createWindow()
+  mainWindow.loadURL(url)
 })
 
-// Quit when all windows are closed.
+// Quit the app once all windows are closed
 app.on('window-all-closed', app.quit)

@@ -14,8 +14,6 @@ const createWindow = () => {
     height: 600
   })
 
-  mainWindow.openDevTools()
-
   let entry
 
   if (isDev) {

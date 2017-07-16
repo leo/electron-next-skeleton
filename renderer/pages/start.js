@@ -1,1 +1,3 @@
-export default () => <span>This is Next.js speaking</span>
+export default () => (
+  <span>This is Next.js speaking</span>
+)

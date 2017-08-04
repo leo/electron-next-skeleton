@@ -18,14 +18,14 @@
     ]
   },
   "devDependencies": {
-    "electron": "1.6.2",
-    "electron-builder": "19.16.0",
-    "next": "3.0.1-beta.15",
+    "electron": "1.6.11",
+    "electron-builder": "19.19.1",
+    "next": "3.0.1-beta.20",
     "react": "15.6.1",
     "react-dom": "15.6.1"
   },
   "dependencies": {
-    "electron-is-dev": "0.2.0",
+    "electron-is-dev": "0.3.0",
     "electron-next": "3.0.7"
   }
 }

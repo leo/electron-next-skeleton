@@ -1,4 +1,8 @@
 module.exports = {
+  webpack(config) {
+    config.target = 'electron-renderer'
+    return config
+  },
   exportPathMap() {
     // Let Next.js know where to find the entry page
     // when it's exporting the static bundle for the use

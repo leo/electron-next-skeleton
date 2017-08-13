@@ -18,6 +18,6 @@
   "dependencies": {
     "app-root-path": "2.0.1",
     "electron-is-dev": "0.3.0",
-    "electron-next": "3.1.0"
+    "electron-next": "3.1.1"
   }
 }

@@ -8,24 +8,16 @@
     "build": "next build renderer && next export renderer",
     "dist": "npm run build && build --dir"
   },
-  "build": {
-    "asar": false,
-    "extraResources": [
-      {
-        "from": "renderer/out",
-        "to": "app/renderer"
-      }
-    ]
-  },
   "devDependencies": {
     "electron": "1.7.5",
-    "electron-builder": "19.19.1",
+    "electron-builder": "19.20.1",
     "next": "3.0.3",
     "react": "15.6.1",
     "react-dom": "15.6.1"
   },
   "dependencies": {
+    "app-root-path": "2.0.1",
     "electron-is-dev": "0.3.0",
-    "electron-next": "3.0.8"
+    "electron-next": "3.1.0"
   }
 }

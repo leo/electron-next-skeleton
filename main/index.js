@@ -1,11 +1,8 @@
-// Native
-const {join} = require('path')
-const {format} = require('url')
-
 // Packages
-const {BrowserWindow, app} = require('electron')
+const { BrowserWindow, app } = require('electron')
 const isDev = require('electron-is-dev')
 const prepareNext = require('electron-next')
+const { resolve } = require('app-root-path')
 
 // Prepare the renderer once the app is ready
 app.on('ready', async () => {
@@ -16,11 +13,9 @@ app.on('ready', async () => {
     height: 600
   })
 
-  const url = isDev ? 'http://localhost:8000/start' : format({
-    pathname: join(__dirname, '../renderer/start/index.html'),
-    protocol: 'file:',
-    slashes: true
-  })
+  const devPath = 'http://localhost:8000/start'
+  const prodPath = 'file://' + resolve('renderer/out/start/index.html')
+  const url = isDev ? devPath : prodPath
 
   mainWindow.loadURL(url)
 })

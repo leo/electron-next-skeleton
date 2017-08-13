@@ -10,6 +10,13 @@
     "build": "next build renderer && next export renderer",
     "dist": "npm run build && build --dir"
   },
+  "build": {
+    "files": [
+      "**/*",
+      "!renderer",
+      "renderer/out"
+    ]
+  },
   "devDependencies": {
     "electron": "1.7.5",
     "electron-builder": "19.20.1",

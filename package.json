@@ -3,6 +3,8 @@
   "productName": "ElectronNext",
   "version": "1.0.0",
   "main": "main/index.js",
+  "license": "MIT",
+  "repository": "leo/electron-next-skeleton",
   "scripts": {
     "start": "electron .",
     "build": "next build renderer && next export renderer",

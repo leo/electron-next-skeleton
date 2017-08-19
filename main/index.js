@@ -1,3 +1,6 @@
+// Native
+const { format } = require('url')
+
 // Packages
 const { BrowserWindow, app } = require('electron')
 const isDev = require('electron-is-dev')
@@ -14,9 +17,14 @@ app.on('ready', async () => {
   })
 
   const devPath = 'http://localhost:8000/start'
-  const prodPath = 'file://' + resolve('renderer/out/start/index.html')
-  const url = isDev ? devPath : prodPath
 
+  const prodPath = format({
+    pathname: resolve('renderer/out/start/index.html'),
+    protocol: 'file:',
+    slashes: true
+  })
+
+  const url = isDev ? devPath : prodPath
   mainWindow.loadURL(url)
 })
 

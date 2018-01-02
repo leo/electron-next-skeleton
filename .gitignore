@@ -1,7 +1,6 @@
 # build output
-dist
-renderer/.next
-renderer/out
+out
+.next
 
 # dependencies
 node_modules

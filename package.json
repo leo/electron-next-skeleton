@@ -1,6 +1,5 @@
 {
   "name": "electron-next-skeleton",
-  "productName": "ElectronNext",
   "version": "1.0.0",
   "main": "main/index.js",
   "license": "MIT",
@@ -8,25 +7,21 @@
   "scripts": {
     "start": "electron .",
     "build": "next build renderer && next export renderer",
-    "dist": "npm run build && build --dir"
+    "dist": "npm run build && pack"
   },
-  "build": {
-    "files": [
-      "**/*",
-      "!renderer",
-      "renderer/out"
-    ]
+  "pack": {
+    "name": "ElectronNext"
   },
   "devDependencies": {
-    "electron": "1.7.5",
-    "electron-builder": "19.22.1",
-    "next": "3.0.6",
-    "react": "15.6.1",
-    "react-dom": "15.6.1"
+    "electron": "^1.7.10",
+    "next": "^4.2.1",
+    "pack": "^1.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "dependencies": {
-    "app-root-path": "2.0.1",
-    "electron-is-dev": "0.3.0",
-    "electron-next": "3.1.1"
+    "app-root-path": "^2.0.1",
+    "electron-is-dev": "^0.3.0",
+    "electron-next": "^3.1.3"
   }
 }

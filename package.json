@@ -7,15 +7,15 @@
   "scripts": {
     "start": "electron .",
     "build": "next build renderer && next export renderer",
-    "dist": "npm run build && pack"
+    "dist": "npm run build && bundle"
   },
-  "pack": {
+  "bundle": {
     "name": "ElectronNext"
   },
   "devDependencies": {
+    "bundle": "^2.0.1",
     "electron": "^1.7.10",
     "next": "^4.2.1",
-    "pack": "^1.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

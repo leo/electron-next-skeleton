@@ -1,0 +1,6 @@
+.tmp
+.vscode
+dist
+build
+node_modules
+.next

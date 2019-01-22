@@ -22,6 +22,7 @@
     "prettier-tslint": "^0.4.2",
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
+    "ts-node": "^8.0.1",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0"

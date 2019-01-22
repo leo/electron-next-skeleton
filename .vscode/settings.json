@@ -4,6 +4,12 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
-    "renderer/.next/**": true
+    "renderer/.next/**": true,
+    ".tmp/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "renderer/.next": true
   }
 }

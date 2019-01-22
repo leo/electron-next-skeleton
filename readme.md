@@ -11,6 +11,8 @@ yarn install
 yarn start
 ```
 
+--------------------------------------------------------------------------------
+
 ### Electron takes forever to install 😒
 
 + **On Windows**: go to the [electron's releases page][electron-releases] and
@@ -22,6 +24,12 @@ version and rename it like: `SHASUMS256.txt-4.0.1`. Then copy those files into
 + **On Linux**: TODO (but should be the same only changing the electron's cache
 directory, and downloading the propper build for you linux distribution from the releases
 page).
+
+--------------------------------------------------------------------------------
+
+## VSCode Extensions
+
+
 
 [original]:https://github.com/leo/electron-next-skeleton
 [typescript]:https://www.typescriptlang.org/
